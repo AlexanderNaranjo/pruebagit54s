@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Insertar insertar formularios, sirve para enviar informacion un servidor.... action hace que se amarre a un archivo que captura los datos del formulario....... y metodo que por ejemplo para enviar los datos del formulario  -->
+    <form action="" method="" >
+        <!--Insertar un label ... for para atar a otro componente dando relacion de esa etiqueta con el componente con el id del mismo nombre  -->
+        <label for="nombre completo">Nombre completo: </label>
+
+        <!--Insertar un input para insertar cajas de texto, tambien para insertar botones, check box, radio button .... 
+            id ....es un identificador para idententificar el objeto en el documento html y poder extraer esos datos del formulario desde html desde otros lenguajes de programacion con el comando get element by id
+            name.... identifica al objeto dentro del formulario y se utiliza para cuando se va a transferir la info al servidor, esa informacion se envia en forma llave valor (input, name, valor)
+            placeholder es un comentario en la caja de texto para guiar lo que se debe introducir-->
+        <input type="text" name="nombreC" id="nombre completo" placeholder="Introduzca su nombre">
+        <br>
+
+        <!--Insertar otro label-->
+        <label for="clave">Password</label>
+        
+        <!--Insertar un input para insertar cajas de textotipo password, con id, name y placeholder-->
+        <input type="password" name="password" id="clave" placeholder="introduzca su clave">
+        <br>
+
+        <!--Insertar un input para insertar boton tipo submit que sirve para enviar toda la informacion del formulario, con id, name y placeholder-->
+        <input type="submit" id="login" name="login" value="Enviar">
+        
+        <!--Insertar un input para insertar boton tipo reset que sirve para borrar toda la informacion del formulario, con id, name y placeholder-->
+        <input type="reset" id="Anular" name="anular" value="Cancelar">
+        <br>
+        
+        <!--Insertar otro label-->
+        <label for="comentarios">comentarios</label>
+        <br>
+
+        <!--Insertar textarea con id y name y con numero de columnas y filas de caracteres-->
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+        <br>
+
+        <!--Insertar un fieldset para agruprar elementos-->
+        <fieldset>
+            <!--Insertar al fieldset un legenda enmarcada-->
+            <legend>Sexo</legend>
+
+            <!--Insertar otro label-->
+            <label for="masculino">Masculino</label>
+
+            <!--Insertar radiobutton con id, value y con el name para identificar el grupos de radiobuttons y con checked forza aque el radiobuttom este seleccionado-->
+            <input type="radio" id="masculino" value="m" name="sexo" checked>
+
+            <!--Insertar otro label-->
+            <label for="femenino">Femenino</label>
+
+            <!--Insertar radiobutton con id, value y con el name para identificar el grupos de radiobuttons y con required (como valor booleano) en alguno de los botones es para exigir se seleccione al menos uno de los radiobuttom -->
+            <input type="radio" id="femenino" value="f" name="sexo" required><br><br>
+        </fieldset>
+
+        <!--Insertar un fieldset para agruprar elementos-->
+        <fieldset>
+            <!--Insertar al fieldset un legenda enmarcada-->
+            <legend>Lenguajes de programacion</legend>
+
+            <!--Se puede insertar textos sin label -->
+            Seleccion el o los lenguajes que domina> <br>
+
+            <!--Insertar cajas de chequeo sin id ni name, pero texto sin adicionar label -->
+            <input type="checkbox">Java <br>
+            <input type="checkbox">Python <br>
+            <input type="checkbox">JavaScript <br>
+            <input type="checkbox">C++ <br><br>
+        </fieldset>
+
+        <!--Insertar un select es una caja con una lista de seleccion -->
+
+        <select name="cuidades[]" id="ciudades">
+            <!--Insertar de las opciones del select-->
+            <option value="1">Barranquilla</option>
+            <option value="2">Cali</option>
+            <option value="3">Medellin</option>
+            <option value="4">Bogota</option>
+        </select>
+        <br><br>
+
+        <!--Insertar un select es una caja con una lista de seleccion con name con [] para que el servidor reconozca que va un array de datos, con multiple que indica que hay varias opciones, y siza para mostrar numero de datos por defecto-->
+
+        <select name="cuidades[]" id="ciudades" multiple size="2">
+            <!--Insertar de las opciones del select-->
+            <option value="1">Barranquilla</option>
+            <option value="2">Cali</option>
+            <option value="3">Medellin</option>
+            <option value="4">Bogota</option>
+        </select>
+
+    </form>
+
+</body>
+</html>
