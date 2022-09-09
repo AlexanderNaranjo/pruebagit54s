@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo1">Titulo 1</h1>
+    <h2 id="titulo2">Titulo 2</h2>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> <!-- CDN del jquery -->
+    <script>
+        let x = $(document)
+        x.ready(inicio)
+
+        function inicio(){
+            let y = $("#titulo1")
+            y.click(metodo1)
+            y = $("#titulo2")
+            y.click(metodo2)
+        }
+
+        function metodo1(){
+            let x = $("#titulo1")  // acceso al elemento por id
+            x.css("color", "green")
+            x.css("background-color", "gray")
+        }
+
+        function metodo2(){
+            let x = $("h2")  // acceso al nombre del elemento por html
+            x.css("color", "blue")
+            x.css("background-color", "orange")
+
+        }
+    </script>
+    
+
+</body>
+</html>
